@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace AdventOfCode2020
 {
     public class Common
     {
-        public static List<string> ReadFile(string filename)
+        public static string[] ReadFile(string filename)
         {
-            return File.ReadAllText(@$"Inputs/{filename}").Split("\n").Where(x => !string.IsNullOrEmpty(x)).ToList();
+            return File.ReadAllLines(@$"Inputs/{filename}");
         }
 
         public class Coord : Tuple<int, int>
