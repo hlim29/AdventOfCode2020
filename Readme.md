@@ -11,4 +11,4 @@
  -|-|-|-|
 [Day 1: Report Repair](https://adventofcode.com/2020/day/1)|✔️|✔️|[Day one](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayOne.cs)|
 [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2)|✔️|✔️|[Day two](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwo.cs)|
-[Day 3: Toboggan Trajectory](https://adventofcode.com/2020/day/3)|✔️|✔️|[Day three](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayThree.
+[Day 3: Toboggan Trajectory](https://adventofcode.com/2020/day/3)|✔️|✔️|[Day three](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayThree.cs)|
