@@ -9,26 +9,13 @@ namespace AdventOfCode2020.Days
     {
         private readonly string[] _input;
         private readonly string[] _compulsory;
+        private readonly string[] _validEyeColours;
 
         public DayFour()
         {
             _compulsory = new string[] { "byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid" };
+            _validEyeColours = new string[] { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
             _input = File.ReadAllText("Inputs/dayfour.txt").Split("\n\n").Select(x => x.Replace("\n", " ")).ToArray();
-        }
-
-        public bool IsValid(Dictionary<string, string> passport)
-        {
-            var keys = passport.Keys;
-            var length = passport.ContainsKey("cid") ? _compulsory.Length : _compulsory.Length - 1;
-            return _compulsory.Intersect(keys).Count() == length;
-        }
-
-        public bool IsValidPartTwo(Dictionary<string, string> passport)
-        {
-            var result = IsValid(passport) && ValidateBirthYear(passport) && ValidateIssueYear(passport)
-                && ValidateExpYear(passport) && ValidateHeight(passport) && ValidateHairColour(passport) 
-                && ValidateEyeColour(passport) && ValidatePassportNo(passport);
-            return result;
         }
 
         public void Process()
@@ -43,35 +30,36 @@ namespace AdventOfCode2020.Days
             var output = new Dictionary<string, string>();
             var spaceDelimited = input.Trim().Split(" ").ToList();
 
-            foreach(var file in spaceDelimited)
+            foreach (var passport in spaceDelimited)
             {
-                if (string.IsNullOrWhiteSpace(file))
+                if (string.IsNullOrWhiteSpace(passport))
                 {
                     continue;
                 }
-                var colonDelimited = file.Split(":");
+                var colonDelimited = passport.Split(":");
                 output[colonDelimited[0]] = colonDelimited[1];
             }
 
             return output;
         }
 
-        private bool ValidateBirthYear(Dictionary<string, string> passport)
+        private bool IsValid(Dictionary<string, string> passport)
         {
-            var year = passport["byr"];
-            return year.Length == 4 && int.Parse(year) >= 1920 && int.Parse(year) <= 2002;
+            var keys = passport.Keys;
+            var length = passport.ContainsKey("cid") ? _compulsory.Length : _compulsory.Length - 1;
+            return _compulsory.Intersect(keys).Count() == length;
         }
 
-        private bool ValidateIssueYear(Dictionary<string, string> passport)
+        private bool IsValidPartTwo(Dictionary<string, string> passport)
         {
-            var year = passport["iyr"];
-            return year.Length == 4 && int.Parse(year) >= 2010 && int.Parse(year) <= 2020;
-        }
-
-        private bool ValidateExpYear(Dictionary<string, string> passport)
-        {
-            var year = passport["eyr"];
-            return year.Length == 4 && int.Parse(year) >= 2020 && int.Parse(year) <= 2030;
+            return IsValid(passport) 
+                && ValidateHeight(passport) 
+                && int.Parse(passport["byr"]) >= 1920 && int.Parse(passport["byr"]) <= 2002
+                && int.Parse(passport["iyr"]) >= 2010 && int.Parse(passport["iyr"]) <= 2020
+                && int.Parse(passport["eyr"]) >= 2020 && int.Parse(passport["eyr"]) <= 2030
+                && _validEyeColours.Contains(passport["ecl"])
+                && passport["pid"].Length == 9 && long.TryParse(passport["pid"], out var _)
+                && passport["hcl"].StartsWith("#") && passport["hcl"].Length == 7 && passport["hcl"].All(c => "#0123456789abcdefABCDEF".Contains(c));
         }
 
         private bool ValidateHeight(Dictionary<string, string> passport)
@@ -91,27 +79,6 @@ namespace AdventOfCode2020.Days
             {
                 return false;
             }
-        }
-
-        private bool ValidateHairColour(Dictionary<string, string> passport)
-        {
-            var hairColour = passport["hcl"];
-            var hairColourValue = hairColour[1..];
-            return hairColour.StartsWith("#") && hairColourValue.Length == 6 && hairColourValue.All(c => "0123456789abcdefABCDEF".Contains(c));
-        }
-
-
-        private bool ValidateEyeColour(Dictionary<string, string> passport)
-        {
-            var eyeColour = passport["ecl"];
-            var validEyeColours = new string[] { "amb", "blu", "brn", "gry", "grn", "hzl", "oth" };
-            return validEyeColours.Contains(eyeColour);
-        }
-
-        private bool ValidatePassportNo(Dictionary<string, string> passport)
-        {
-            var passportNo = passport["pid"];
-            return passportNo.Length == 9 && long.TryParse(passportNo, out var _);
         }
     }
 }
