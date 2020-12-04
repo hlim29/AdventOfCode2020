@@ -26,7 +26,11 @@ namespace AdventOfCode
                         var trajectory = new DayThree();
                         trajectory.Process();
                         break;
-                    case int n when n > 3 && n <= 25:
+                    case 4:
+                        var four = new DayFour();
+                        four.Process();
+                        break;
+                    case int n when n > 4 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:

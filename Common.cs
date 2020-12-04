@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace AdventOfCode2020
 {
@@ -10,11 +9,16 @@ namespace AdventOfCode2020
             return File.ReadAllLines(@$"Inputs/{filename}");
         }
 
-        public class Coord : Tuple<int, int>
+        public class Coord
         {
-            public Coord(int X, int Y) : base(X, Y)
+            public Coord(int x, int y)
             {
+                X = x;
+                Y = y;
             }
+
+            public int X { get; set; }
+            public int Y { get; set; }
         }
     }
 }
