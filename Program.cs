@@ -27,10 +27,14 @@ namespace AdventOfCode
                         trajectory.Process();
                         break;
                     case 4:
-                        var four = new DayFour();
-                        four.Process();
+                        var passport = new DayFour();
+                        passport.Process();
                         break;
-                    case int n when n > 4 && n <= 25:
+                    case 5:
+                        var boarding = new DayFive();
+                        boarding.Process();
+                        break;
+                    case int n when n > 5 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:

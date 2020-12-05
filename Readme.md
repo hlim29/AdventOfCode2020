@@ -13,3 +13,4 @@
 [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2)|✔️|✔️|[Day two](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwo.cs)|
 [Day 3: Toboggan Trajectory](https://adventofcode.com/2020/day/3)|✔️|✔️|[Day three](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayThree.cs)|
 [Day 4: Passport Processing](https://adventofcode.com/2020/day/4)|✔️|✔️|[Day four](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayFour.cs)|
+[Day 5: Binary Boarding](https://adventofcode.com/2020/day/5)|✔️|✔️|[Day five](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayFive.cs)|
