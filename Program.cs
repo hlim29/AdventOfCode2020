@@ -34,6 +34,10 @@ namespace AdventOfCode
                         var boarding = new DayFive();
                         boarding.Process();
                         break;
+                    case 6:
+                        var form = new DaySix();
+                        form.Process();
+                        break;
                     case int n when n > 5 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
