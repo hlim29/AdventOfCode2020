@@ -15,3 +15,4 @@
 [Day 4: Passport Processing](https://adventofcode.com/2020/day/4)|✔️|✔️|[Day four](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayFour.cs)|
 [Day 5: Binary Boarding](https://adventofcode.com/2020/day/5)|✔️|✔️|[Day five](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayFive.cs)|
 [Day 6: Custom Customs](https://adventofcode.com/2020/day/6)|✔️|✔️|[Day six](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DaySix.cs)|
+[Day 7: Handy Haversacks](https://adventofcode.com/2020/day/7)|✔️|✔️|[Day seven](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DaySeven.cs)|

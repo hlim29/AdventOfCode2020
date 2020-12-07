@@ -38,7 +38,11 @@ namespace AdventOfCode
                         var form = new DaySix();
                         form.Process();
                         break;
-                    case int n when n > 5 && n <= 25:
+                    case 7:
+                        var bags = new DaySeven();
+                        bags.Process();
+                        break;
+                    case int n when n > 7 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
