@@ -42,7 +42,11 @@ namespace AdventOfCode
                         var bags = new DaySeven();
                         bags.Process();
                         break;
-                    case int n when n > 7 && n <= 25:
+                    case 8:
+                        var assembly = new DayEight();
+                        assembly.Process();
+                        break;
+                    case int n when n > 8 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
