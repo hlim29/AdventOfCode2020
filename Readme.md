@@ -17,3 +17,4 @@
 [Day 6: Custom Customs](https://adventofcode.com/2020/day/6)|✔️|✔️|[Day six](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DaySix.cs)|
 [Day 7: Handy Haversacks](https://adventofcode.com/2020/day/7)|✔️|✔️|[Day seven](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DaySeven.cs)|
 [Day 8: Handheld Halting](https://adventofcode.com/2020/day/8)|✔️|✔️|[Day eight](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayEight.cs)|
+[Day 9: Encoding Error](https://adventofcode.com/2020/day/9)|✔️|✔️|[Day nine](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayNine.cs)|

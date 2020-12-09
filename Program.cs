@@ -46,7 +46,11 @@ namespace AdventOfCode
                         var assembly = new DayEight();
                         assembly.Process();
                         break;
-                    case int n when n > 8 && n <= 25:
+                    case 9:
+                        var encoding = new DayNine();
+                        encoding.Process();
+                        break;
+                    case int n when n > 9 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
