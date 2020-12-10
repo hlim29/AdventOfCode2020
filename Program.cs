@@ -50,7 +50,11 @@ namespace AdventOfCode
                         var encoding = new DayNine();
                         encoding.Process();
                         break;
-                    case int n when n > 9 && n <= 25:
+                    case 10:
+                        var ten = new DayTen();
+                        ten.Process();
+                        break;
+                    case int n when n > 10 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
