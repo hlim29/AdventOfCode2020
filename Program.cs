@@ -54,6 +54,10 @@ namespace AdventOfCode
                         var ten = new DayTen();
                         ten.Process();
                         break;
+                    case 11:
+                        var eleven = new DayEleven();
+                        eleven.Process();
+                        break;
                     case int n when n > 10 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
