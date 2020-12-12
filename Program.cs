@@ -51,14 +51,18 @@ namespace AdventOfCode
                         encoding.Process();
                         break;
                     case 10:
-                        var ten = new DayTen();
-                        ten.Process();
+                        var plugs = new DayTen();
+                        plugs.Process();
                         break;
                     case 11:
-                        var eleven = new DayEleven();
-                        eleven.Process();
+                        var seats = new DayEleven();
+                        seats.Process();
                         break;
-                    case int n when n > 10 && n <= 25:
+                    case 12:
+                        var ship = new DayTwelve();
+                        ship.Process();
+                        break;
+                    case int n when n > 12 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
