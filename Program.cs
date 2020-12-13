@@ -62,6 +62,10 @@ namespace AdventOfCode
                         var ship = new DayTwelve();
                         ship.Process();
                         break;
+                    case 13:
+                        var bus = new DayThirteen();
+                        bus.Process();
+                        break;
                     case int n when n > 12 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;

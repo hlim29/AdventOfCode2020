@@ -20,4 +20,5 @@
 [Day 9: Encoding Error](https://adventofcode.com/2020/day/9)|✔️|✔️|[Day nine](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayNine.cs)|
 [Day 10: Adapter Array](https://adventofcode.com/2020/day/10)|✔️|🏳️|[Day ten](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTen.cs)|
 [Day 11: Seating System](https://adventofcode.com/2020/day/11)|✔️|✔️|[Day eleven](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayEleven.cs)|
-[Day 12: Day 12: Rain Risk](https://adventofcode.com/2020/day/12)|✔️|✔️|[Day twelve](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwelve.cs)|
+[Day 12: Rain Risk](https://adventofcode.com/2020/day/12)|✔️|✔️|[Day twelve](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwelve.cs)|
+[Day 13: Shuttle Search](https://adventofcode.com/2020/day/13)|✔️|✔️|[Day thirteen](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayThirteen.cs)|
