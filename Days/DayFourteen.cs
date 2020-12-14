@@ -45,18 +45,10 @@ namespace AdventOfCode2020.Days
                     : Convert.ToString(long.Parse(matches["value"].Value), 2).PadLeft(bitmask.Length, '0');
 
                 var maskAndValues = bitmask.Zip(value, (x, y) => (Mask: x, Value: y));
-                var result = string.Empty;
-                foreach (var (Mask, Value) in maskAndValues)
-                {
-                    if (isPartTwo)
-                    {
-                        result += Mask != '0' ? Mask : Value;
-                    }
-                    else
-                    {
-                        result += Mask != 'X' ? Mask : Value;
-                    }
-                }
+
+                var result = isPartTwo 
+                    ? string.Concat(maskAndValues.Select(x => x.Mask != '0' ? x.Mask : x.Value))
+                    : string.Concat(maskAndValues.Select(x => x.Mask != 'X' ? x.Mask : x.Value));
 
                 var addresses = isPartTwo
                     ? GenerateCombinations(result).Select(x => Convert.ToInt64(x, 2).ToString()).ToList()
