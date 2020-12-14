@@ -66,7 +66,11 @@ namespace AdventOfCode
                         var bus = new DayThirteen();
                         bus.Process();
                         break;
-                    case int n when n > 12 && n <= 25:
+                    case 14:
+                        var bitmask = new DayFourteen();
+                        bitmask.Process();
+                        break;
+                    case int n when n > 14 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
