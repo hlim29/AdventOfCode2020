@@ -70,6 +70,10 @@ namespace AdventOfCode
                         var bitmask = new DayFourteen();
                         bitmask.Process();
                         break;
+                    case 15:
+                        var spoken = new DayFifteen();
+                        spoken.Process();
+                        break;
                     case int n when n > 14 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
