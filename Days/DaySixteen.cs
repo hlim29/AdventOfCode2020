@@ -51,16 +51,16 @@ namespace AdventOfCode2020.Days
 
             var matchingFields = transposedTickets.Select((a, i) => (Fields: _criteria.Keys.Where(x => AllNumbersMatch(x, a)), Index: i)).OrderBy(x => x.Fields.Count()).ToList();
 
-            for (var i = 0; i < transposedTickets.Count(); i++)
+            foreach(var _ in transposedTickets)
             {
                 var firstMatch = matchingFields.First();
 
                 if (firstMatch.Fields.First().Contains("depart"))
                 {
-                    result.Add(matchingFields.First().Index);
+                    result.Add(firstMatch.Index);
                 }
 
-                usedCriteria.Add(matchingFields.First().Fields.First());
+                usedCriteria.Add(firstMatch.Fields.First());
                 matchingFields = matchingFields.Select(x => (Fields: x.Fields.Where(y => !usedCriteria.Contains(y)), x.Index)).Where(x => x.Fields.Count() > 0).OrderBy(x => x.Fields.Count()).ToList();
             }
 
