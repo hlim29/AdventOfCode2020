@@ -74,7 +74,11 @@ namespace AdventOfCode
                         var spoken = new DayFifteen();
                         spoken.Process();
                         break;
-                    case int n when n > 14 && n <= 25:
+                    case 16:
+                        var sixteen = new DaySixteen();
+                        sixteen.Process();
+                        break;
+                    case int n when n > 16 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
