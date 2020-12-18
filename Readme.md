@@ -26,3 +26,4 @@
 [Day 15: Rambunctious Recitation](https://adventofcode.com/2020/day/15)|✔️|✔️|[Day fifteen](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayFifteen.cs)|
 [Day 16: Ticket Translation](https://adventofcode.com/2020/day/16)|✔️|✔️|[Day sixteen](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DaySixteen.cs)|
 [Day 17: Conway Cubes](https://adventofcode.com/2020/day/17)|✔️|✔️|[Day seventeen](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DaySeventeen.cs)|
+[Day 18: Operation Order](https://adventofcode.com/2020/day/18)|✔️|✔️|[Day eighteen](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayEighteen.cs)|

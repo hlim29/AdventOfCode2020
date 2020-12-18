@@ -82,7 +82,11 @@ namespace AdventOfCode
                         var seventeen = new DaySeventeen();
                         seventeen.Process();
                         break;
-                    case int n when n > 16 && n <= 25:
+                    case 18:
+                        var eighteen = new DayEighteen();
+                        eighteen.Process();
+                        break;
+                    case int n when n > 18 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
