@@ -86,7 +86,11 @@ namespace AdventOfCode
                         var eighteen = new DayEighteen();
                         eighteen.Process();
                         break;
-                    case int n when n > 18 && n <= 25:
+                    case 19:
+                        var regex = new DayNineteen();
+                        regex.Process();
+                        break;
+                    case int n when n > 19 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
                     case 0:
