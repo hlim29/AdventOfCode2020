@@ -90,6 +90,10 @@ namespace AdventOfCode
                         var regex = new DayNineteen();
                         regex.Process();
                         break;
+                    case 20:
+                        var twenty = new DayTwenty();
+                        twenty.Process();
+                        break;
                     case int n when n > 19 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
