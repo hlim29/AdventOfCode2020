@@ -94,6 +94,10 @@ namespace AdventOfCode
                         var twenty = new DayTwenty();
                         twenty.Process();
                         break;
+                    case 21:
+                        var allergens = new DayTwentyone();
+                        allergens.Process();
+                        break;
                     case int n when n > 19 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
