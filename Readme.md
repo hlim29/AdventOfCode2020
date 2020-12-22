@@ -30,3 +30,4 @@
 [Day 19: Monster Messages](https://adventofcode.com/2020/day/19)|✔️|✔️|[Day nineteen](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayNineteen.cs)|
 [Day 20: Jurassic Jigsaw](https://adventofcode.com/2020/day/20)|✔️|🏳️|[Day twenty](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwenty.cs)|
 [Day 21: Allergen Assessment](https://adventofcode.com/2020/day/21)|✔️|✔️|[Day twenty-one](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentyone.cs)|
+[Day 22: Crab Combat](https://adventofcode.com/2020/day/22)|✔️|✔️|[Day twenty-two](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentytwo.cs)|
