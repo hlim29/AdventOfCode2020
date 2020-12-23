@@ -7,11 +7,11 @@ namespace AdventOfCode2020.Days
 {
     public class DayTwentythree
     {
-        private List<long> _input;
+        private long[] _input;
 
         public DayTwentythree()
         {
-            _input = ReadRaw("daytwentythree.txt").Select(x => long.Parse(x.ToString())).ToList();
+            _input = ReadRaw("daytwentythree.txt").Select(x => long.Parse(x.ToString())).ToArray();
         }
 
         public void Process()
@@ -25,16 +25,24 @@ namespace AdventOfCode2020.Days
 
         private long[] PartOne()
         {
+            var current = _input[0];
             for (int i = 0; i < 100; i++)
             {
                 var max = _input.Max();
-                var currentIndex = i % _input.Count();
-                var current = _input[currentIndex];
-                var destination = current - 1;
+                var destination = current.Value - 1;
+                var current2 = current;
 
-                var range = Enumerable.Range(1, 3).Select(x => long.Parse(_input[(x + currentIndex) % _input.Count()].ToString())).ToList();
+                var range = new List<LinkedListNode<long>>();
 
-                while (range.Contains(destination) || destination < 1)
+                Enumerable.Range(0, 3).ToList().ForEach(x => {
+                    current2 = GetNext(current2);
+                    range.Add(current2);
+                    range.Remove(current2);
+                });
+
+                var rangeValues = range.Select(x => x.Value);
+
+                while (rangeValues.Contains(destination) || destination < 1)
                 {
                     destination--;
                     if (destination < 1)
@@ -43,36 +51,56 @@ namespace AdventOfCode2020.Days
                     }
                 }
                 
-                var pickedCups = range;
-                range.ForEach(x => _input.Remove(x));
+                //range.ForEach(x => _input.Remove(x));
+                range.Reverse();
+                var dest = _input.Find(destination);
 
-                var insertIndex = _input.IndexOf(destination);
+                range.ForEach(x => _input.AddAfter(dest, x));
 
-                _input.InsertRange(insertIndex + 1, pickedCups);
-
-                var displacement = _input.IndexOf(current) - currentIndex;
-
-                _input = displacement > 0 
-                    ? _input = _input.ToArray()[displacement..].Concat(_input.ToArray()[..displacement]).ToList()
-                    :_input = _input.ToArray()[displacement..].Concat(_input.ToArray()[..displacement]).ToList();
+                current = GetNext(current);
             }
 
-            var oneIndex = _input.IndexOf(1);
-            return _input.ToArray()[(oneIndex+1)..].Concat(_input.ToArray()[..oneIndex]).ToArray();
+            var oneIndex = _input.Find(1);
+            var result = new List<long>();
+
+            var currentNode = GetNext(oneIndex);
+            while (currentNode.Value != 1)
+            {
+                result.Add(currentNode.Value);
+                currentNode = GetNext(currentNode);
+            }
+            return result.ToArray();// _input.ToArray()[(oneIndex+1)..].Concat(_input.ToArray()[..oneIndex]).ToArray();
+        }
+
+        private LinkedListNode<long> GetNext(LinkedListNode<long> current)
+        {
+            return current.Next ?? _input.First;
+        }
+
+        private int GetIndex(long value)
+        {
+            var count = 0;
+            for (var node = _input.First; node != null; node = node.Next, count++)
+            {
+                if (_input.Equals(node.Value))
+                    return count;
+            }
+            return -1;
         }
 
         private void PartTwo()
         {
-            _input = ReadRaw("daytwentythree.txt").Select(x => long.Parse(x.ToString())).ToList();
+            _input = new LinkedList<long>();
+            ReadRaw("daytwentythree.txt").Select(x => long.Parse(x.ToString())).ToList().ForEach(x => _input.AddLast(x));
 
             var max = _input.Max();
 
             while (max < 1000000)
             {
                 max++;
-                _input.Add(max);
+                _input.AddLast(max);
             }
-            max = _input.Max();
+            max = 1000000;
 
             for (int i = 0; i < 100000; i++)
             {
