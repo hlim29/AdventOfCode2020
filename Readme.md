@@ -31,3 +31,4 @@
 [Day 20: Jurassic Jigsaw](https://adventofcode.com/2020/day/20)|✔️|🏳️|[Day twenty](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwenty.cs)|
 [Day 21: Allergen Assessment](https://adventofcode.com/2020/day/21)|✔️|✔️|[Day twenty-one](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentyone.cs)|
 [Day 22: Crab Combat](https://adventofcode.com/2020/day/22)|✔️|✔️|[Day twenty-two](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentytwo.cs)|
+[Day 23: Crab Cups](https://adventofcode.com/2020/day/23)|✔️|🏳️|[Day twenty-three](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentythree.cs)|
