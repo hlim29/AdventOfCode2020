@@ -102,6 +102,10 @@ namespace AdventOfCode
                         var cards = new DayTwentytwo();
                         cards.Process();
                         break;
+                    case 23:
+                        var twentythree = new DayTwentythree();
+                        twentythree.Process();
+                        break;
                     case int n when n > 19 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
