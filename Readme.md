@@ -33,3 +33,4 @@
 [Day 22: Crab Combat](https://adventofcode.com/2020/day/22)|✔️|✔️|[Day twenty-two](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentytwo.cs)|
 [Day 23: Crab Cups](https://adventofcode.com/2020/day/23)|✔️|🏳️|[Day twenty-three](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentythree.cs)|
 [Day 24: Lobby Layout](https://adventofcode.com/2020/day/24)|✔️|✔️|[Day twenty-four](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentyfour.cs)|
+[Day 25: Combo Breaker](https://adventofcode.com/2020/day/25)|✔️|✔️|[Day twenty-five](https://github.com/hlim29/AdventOfCode2020/blob/master/Days/DayTwentyfive.cs)|
