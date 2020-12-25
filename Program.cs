@@ -110,6 +110,10 @@ namespace AdventOfCode
                         var hexagons = new DayTwentyfour();
                         hexagons.Process();
                         break;
+                    case 25:
+                        var xmas = new DayTwentyfive();
+                        xmas.Process();
+                        break;
                     case int n when n > 19 && n <= 25:
                         Console.WriteLine("Coming soon");
                         break;
